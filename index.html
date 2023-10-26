@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Decrypt Message</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="bundle.js"></script>
+</head>
+<body>
+
+    <h1>Eth-Crypto Example</h1>
+
+    <div>
+        <label for="mnemonic">Mnemonic:</label>
+        <input type="text" id="mnemonic">
+    </div>
+
+    <div>
+        <label for="derivationPath">Derivation Path:</label>
+        <input type="text" id="derivationPath" value="m/44'/60'/0'/0/0">
+    </div>
+
+    <button onclick="generatePrivateKey()">Generate Private Key</button>
+
+    <div id="walletAddressDiv">
+        <h2>Wallet Address:</h2>
+        <pre id="walletAddress"></pre>
+    </div>
+
+    <div id="generatedKeyDiv">
+        <h2>Generated Private Key:</h2>
+        <input type="text" id="generatedPrivateKey" size="70">
+    </div>
+
+    <div>
+        <label for="encryptedMessageInput">Encrypted Message:</label>
+        <input type="text" id="encryptedMessageInput">
+    </div>
+
+    <button onclick="decryptMessage()">Decrypt</button>
+
+    <div>
+        <h2>Decrypted Message:</h2>
+        <textarea id="decryptedMessage" rows="10" cols="80" readonly></textarea>
+    </div>
+
+</body>
+</html>
